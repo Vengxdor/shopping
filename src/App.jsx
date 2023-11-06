@@ -1,15 +1,18 @@
 import React from 'react'
 import Product from './component/product'
 import Filters from './component/Filters'
+import Header from './component/Header'
+import CartProvider from './context/cart'
 
 function App () {
   return (
-    <main className='flex flex-col items-center'>
-
-      <h1 className='text-4xl mb-4'>Shopping cart</h1>
-      <Filters/>
-      <Product/>
-    </main>
+    <CartProvider>
+      <main className='flex flex-col items-center'>
+        <Header />
+        <Filters />
+        <Product />
+      </main>
+    </CartProvider>
   )
 }
 
