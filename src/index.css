@@ -25,6 +25,10 @@
   /* margin: 0 auto; */
 }
 
+.cart {
+  transition: left 300ms ease;
+}
+
 .cart-button:checked ~ .cart {
  left: 0 !important;
 }

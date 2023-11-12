@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { FilterContext } from '../context/Filter-context'
+import item from '../mocks/products.json'
 
 function useFilter () {
   const { filters, setFilters } = useContext(FilterContext)
@@ -15,10 +16,11 @@ function useFilter () {
       )
     })
   }
+  const products = filterProducts(item.products)
   return {
     filters,
     setFilters,
-    filterProducts
+    products
   }
 }
 

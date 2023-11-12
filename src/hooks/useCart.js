@@ -2,9 +2,9 @@ import { useContext } from 'react'
 import { CartContext } from '../context/cart'
 
 function useCart () {
-  const { cart, setCart } = useContext(CartContext)
+  const { cart, setCart, handleAdd, removeCart } = useContext(CartContext)
   return {
-    cart, setCart
+    cart, setCart, handleAdd, removeCart
   }
 }
 
